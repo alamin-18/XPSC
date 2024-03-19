@@ -7,18 +7,20 @@ int main()
 
     int s, t;
     cin >> s >> t;
-    int count = 0;
+    int cnt = 0;
     for (int i = 0; i <= s; i++)
     {
-        for (int j = 0; j <= s - i; j++)
+        for (int j = 0; j <= s; j++)
         {
-            int c = s - i - j;
-            if (i * j * c <= t)
+            for (int k = 0; k <= s; k++)
             {
-                count++;
+                if (i + j + k <= s && i * j * k <= t)
+                {
+                    cnt++;
+                }
             }
         }
     }
-    cout<<count<<'\n';
+    cout << cnt << '\n';
     return 0;
 }
