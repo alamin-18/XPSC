@@ -1,21 +1,21 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-#define ll long long;
+// #define ll long long int;
 
 int main()
 {
 
-    ll Tc;
+    long long int Tc;
     cin >> Tc;
     while (Tc--)
     {
-        vector<ll> v;
-        ll n, k, cnt = 0, cat = 0;
+        vector<long long int> v;
+        long long int n, k, cnt = 0, cat = 0;
         cin >> n >> k;
-        for (ll i = 0; i < k; i++)
+        for (long long int i = 0; i < k; i++)
         {
-            ll num;
+            long long int num;
             cin >> num;
             v.push_back(num);
         }
@@ -29,7 +29,7 @@ int main()
             if (k == 0 || v.empty())
                 break;
         }
-        cout << cnt << endll;
+        cout << cnt << endl;
     }
     return 0;
 }
