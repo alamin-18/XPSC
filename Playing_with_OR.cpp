@@ -17,17 +17,28 @@ int main()
             cin >> a[i];
         }
 
-        for (int i = 0; i < (1 << n); i++)
+        int odd = 0;
+        for (int i = 0; i < k; i++)
         {
-
-            for (int j = 0; j < n; j++)
-            {
-                if ((i >> j) & 1)
-                {
-                    
-                }
-            }
+            if (a[i] % 2 != 0)
+                odd++;
         }
+
+        int ans = 0;
+        if (odd > 0)
+            ans++;
+
+        for (int i = k; i < n; i++)
+        {
+            if (a[i - k] % 2 != 0)
+                odd--;
+            if (a[i] % 2 != 0)
+                odd++;
+            if (odd > 0)
+                ans++;
+        }
+
+        cout << ans << '\n';
     }
 
     return 0;
